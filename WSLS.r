@@ -679,7 +679,7 @@ simulation <- function(Param.df, type, exp_type, save=F, savepath="",
         
         Gcon$conN = Gcon$conN + Beta_gN*(Outputs_cho$AC[ThisPhase] - unique(Schema_EI$Gcon))
         Gcon$conVar = Gcon$conVar + Beta_gVar*(abs(Outputs_cho$AC[ThisPhase] - unique(Schema_EI$Gcon)) - Gcon$conVar)
-        # change: update memory after each decision phase
+        #change: update memory after each decision phase
         if (decisiontime == 1) {
         last_schema_vec[1] <- Outputs_cho$Schema[ThisPhase]
         last_success_vec[1] <- (Outputs_cho$payoff[ThisPhase] >= 5 && Outputs_cho$AC[ThisPhase] == 1)
